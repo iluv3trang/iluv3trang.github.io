@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Trang Nguyen’s academic profile and selected data analytics projects.">
   <title>Trang Nguyen | Data Analytics</title>
+  .profile-sparkle {
+  display: none;
+}
+
+@media (min-width: 70rem) and (prefers-reduced-motion: no-preference) {
+  .profile-sparkle {
+    display: block;
+    position: fixed;
+    top: 9rem;
+    right: 3rem;
+    width: 4px;
+    height: 4px;
+    pointer-events: none;
+  }
+
+  .profile-sparkle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow:
+        0 -26px #5c8f79,  18px -18px #c49345,
+       26px  0   #5c8f79,  18px  18px #c49345,
+        0  26px #5c8f79, -18px  18px #c49345,
+      -26px  0   #5c8f79, -18px -18px #c49345;
+    animation: profile-burst 1.6s ease-out 0.4s both;
+  }
+}
+
+@keyframes profile-burst {
+  0%   { opacity: 0; transform: scale(0.2); }
+  20%  { opacity: 0.85; }
+  100% { opacity: 0; transform: scale(1.8); }
+}
   <style>
     body {
       margin: 0;
