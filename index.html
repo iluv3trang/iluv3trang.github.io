@@ -22,16 +22,21 @@
   }
 
   .profile-sparkle::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    box-shadow:
-        0 -26px #5c8f79,  18px -18px #c49345,
-       26px  0   #5c8f79,  18px  18px #c49345,
-        0  26px #5c8f79, -18px  18px #c49345,
-      -26px  0   #5c8f79, -18px -18px #c49345;
-    animation: profile-burst 1.6s ease-out 0.4s both;
-  }
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow:
+     0   -9px 0 -1px #e0b64f,   0  -17px #d79b2d,   0  -31px #d79b2d,
+     8   -7px 0 -1px #78ad96,  16px -15px #4f9176,  29px -27px #4f9176,
+    10px  1px 0 -1px #e8a184,  20px   2px #ce775d,  35px   4px #ce775d,
+     7px  8px 0 -1px #e0b64f,  13px  16px #d79b2d,  22px  29px #d79b2d,
+    -2px 10px 0 -1px #78ad96,  -4px  19px #4f9176,  -7px  33px #4f9176,
+    -9px  6px 0 -1px #e8a184, -17px  12px #ce775d, -30px  20px #ce775d,
+    -9px -3px 0 -1px #e0b64f, -18px  -6px #d79b2d, -33px -11px #d79b2d,
+    -5px -8px 0 -1px #78ad96, -10px -16px #4f9176, -17px -29px #4f9176;
+  animation: profile-burst 1.6s ease-out 0.4s both;
+}
 }
 
 @keyframes profile-burst {
