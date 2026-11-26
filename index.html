@@ -3,10 +3,227 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trang Nguyen</title>
+  <meta name="description" content="Trang Nguyen’s academic profile and selected data analytics projects.">
+  <title>Trang Nguyen | Data Analytics</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f8f5;
+      color: #202c2a;
+      font: 1rem/1.65 system-ui, sans-serif;
+    }
+
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: clamp(2rem, 7vw, 5rem) 1.25rem;
+    }
+
+    header {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #cbd5ce;
+    }
+
+    h1, h2 {
+      font-family: Georgia, serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      margin: 0 0 0.5rem;
+    }
+
+    h2 { margin-bottom: 0.75rem; }
+    h3, p { margin: 0 0 0.65rem; }
+    section { margin-top: 2rem; }
+    article { margin-top: 1.25rem; }
+    a { color: #215c4a; }
+    .subtitle { color: #42564f; }
+
+    .portrait {
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Trang Nguyen</h1>
-<p>Data Analytics · M.S. in Business Analytics · Healthcare Experience</p>
+  <main>
+    <header>
+      <!-- <img class="portrait" src="profile.jpg" alt="Portrait of Trang Nguyen"> -->
+      <h1>Trang Nguyen</h1>
+      <p class="subtitle">Data Analytics · M.S. in Business Analytics · Healthcare Experience</p>
+<nav aria-label="Profile sections">
+  <a href="#about">About</a>
+  <a href="#interests">Research Interests</a>
+  <a href="#projects">Selected Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+</nav>
+    </header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Hi, I’m Trang Nguyen, a data analyst with an M.S. in Business Analytics
+    from Mercer University. I use statistical modeling and machine learning
+    to study how organizations operate, from predicting delivery times to
+    evaluating patient flow in clinics.
+  </p>
+  <p>
+    I began my healthcare career as a medical assistant in ophthalmology,
+    where I supported diagnostic pre-testing and saw how patients move
+    through a specialty clinic. I now analyze electronic health records
+    and insurance claims to investigate reimbursement discrepancies,
+    forecast payments, and track operational performance. Working in both
+    roles has made me interested in how the way data are collected affects
+    what we can learn from them.
+  </p>
+</section>
+
+<section id="interests">
+  <h2>Research Interests</h2>
+  <ul>
+    <li>
+      <strong>Care delivery and health systems.</strong> Using causal
+      inference and machine learning to study how changes in care delivery
+      affect patient outcomes and clinic operations.
+    </li>
+    <li>
+      <strong>Medical imaging.</strong> Exploring how machine learning can
+      support the interpretation of ophthalmic images.
+    </li>
+    <li>
+      <strong>Sensors and biosignal processing.</strong> Exploring how
+      measurements collected over time can help track changes in health.
+    </li>
+  </ul>
+</section>
+<section id="experience">
+  <h2>Experience</h2>
+
+  <article>
+    <h3>Data Analyst, Revenue Cycle &amp; Operations</h3>
+    <p class="subtitle">Chen Eye Center (affiliated with Wellstar Health System) · August 2023–Present</p>
+    <p>
+      I analyze medical claims, payer reimbursements, and contracted fee
+      schedules. My work identifying reimbursement discrepancies
+      contributed to a 15% increase in revenue over two months. I also
+      developed models in R to forecast reimbursements and built dashboards
+      to track revenue cycle performance.
+    </p>
+  </article>
+
+  <article>
+    <h3>Data Analyst Intern, Optometry Sales</h3>
+    <p class="subtitle">Chen Eye Center (affiliated with Wellstar Health System) · June–August 2023</p>
+    <p>
+      I built dashboards to monitor optical sales and inventory and
+      compared regression and tree-based models to forecast sales.
+    </p>
+  </article>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <article>
+    <h3>Mercer University</h3>
+    <p class="subtitle">M.S. in Business Analytics/Data Analytics · May 2024</p>
+    <p>GPA 3.91/4.00 · Phi Kappa Phi · Beta Gamma Sigma</p>
+  </article>
+
+  <article>
+    <h3>Kennesaw State University</h3>
+    <p class="subtitle">B.S. in Chemistry · May 2020</p>
+    <p>Pre-pharmacy track · Dean’s List</p>
+  </article>
+</section>
+ <section id="projects">
+  <h2>Selected Projects</h2>
+
+  <article>
+    <h3>Enhancing DoorDash Revenue in Optimizing Delivery Efficiency</h3>
+    <p class="subtitle">
+      Graduate capstone · Mercer University · March–May 2024<br>
+      Advisor: Professor Rui Sun
+    </p>
+    <p>
+      I worked with one classmate to clean and preprocess 197,429 records and
+      compare seven models for predicting total delivery time: LASSO regression,
+      multiple linear regression, decision trees, random forests, support vector
+      regression, XGBoost, and LightGBM. LightGBM achieved the lowest root mean
+      squared error (RMSE) of 14.16. We used our findings to recommend ways to
+      improve delivery efficiency.
+    </p>
+  </article>
+
+  <article>
+    <h3>Improving Operational Management of the Hospital’s Observation Unit</h3>
+    <p class="subtitle">
+      Graduate course project · Mercer University · January–February 2024<br>
+      Advisor: Professor Reza Maihami
+    </p>
+    <p>
+      I worked with one classmate to compare logistic regression, classification
+      trees, and random forests. We used the results to identify diagnoses to
+      consider excluding from observation-unit placement and to inform outpatient
+      classification. I also used linear programming to evaluate how proposed
+      changes to unit operations could affect patient wait times, the rate of
+      admission status changes, and daily revenue.
+    </p>
+  </article>
+
+  <article>
+    <h3>Primary &amp; Urgent Care Clinic Operations</h3>
+    <p class="subtitle">
+      Graduate course project · Mercer University · August–October 2023<br>
+      Advisor: Professor Ehsan Ahmadi
+    </p>
+    <p>
+      I led a four-person team that built a discrete-event simulation in JaamSim
+      to evaluate clinic workflows. In the simulation, our proposed workflow
+      increased patient throughput by 19%, eliminated instances of patients
+      leaving before receiving care, and increased estimated daily profit by 22.8%.
+    </p>
+  </article>
+
+  <article>
+    <h3>Evaluating Smoking Status as a Predictor of Diabetes</h3>
+    <p class="subtitle">
+      Graduate course project · Mercer University · August–October 2023<br>
+      Advisor: Professor Arnab Nayak
+    </p>
+    <p>
+      I led a four-person team that analyzed 100,000 observations using logistic
+      regression and propensity score analysis to examine the association between
+      smoking status and diabetes. We also built a model that evaluated smoking
+      status alongside other predictors of diabetes.
+    </p>
+  </article>
+
+  <article>
+    <h3>A Predictive Model for Heart Attack Risk</h3>
+    <p class="subtitle">
+      Graduate course project · Mercer University · March–May 2023<br>
+      Advisor: Professor Rui Sun
+    </p>
+    <p>
+      I analyzed 4,000 observations in R and Excel to identify factors associated
+      with heart attack risk and used those factors to develop a predictive model.
+    </p>
+  </article>
+</section>
+  </main>
 </body>
 </html>
