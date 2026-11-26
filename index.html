@@ -402,18 +402,16 @@ I'm Trang Nguyen, a healthcare data analyst with over five years of healthcare e
         }
       }, 350);
     }, { once: true });
-
     document.addEventListener("click", (event) => {
       if (event.detail === 0 || window.getSelection()?.toString()) return;
-      if (event.target.closest("a, button, input, textarea, select")) return;
 
-      const { left, right } = main.getBoundingClientRect();
-      const edge = document.documentElement.clientWidth;
-      if (event.clientX < left) {
-        showBurst(event.clientX, event.clientY, 0, left);
-      } else if (event.clientX > right) {
-        showBurst(event.clientX, event.clientY, right, edge);
-      }
+      const clickedBlankArea = event.target.matches(
+        "html, body, main, header, section, article, nav"
+      );
+      if (!clickedBlankArea) return;
+
+      const pageWidth = document.documentElement.clientWidth;
+      showBurst(event.clientX, event.clientY, 0, pageWidth);
     });
   })();
   </script>
