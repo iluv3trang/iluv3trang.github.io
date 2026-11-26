@@ -271,25 +271,34 @@ I'm Trang Nguyen, a healthcare data analyst with over five years of healthcare e
   </ul>
 </section>
   </main>
+
   <script>
-  const sparkle = document.querySelector(".profile-sparkle");
-  const motionAllowed = window.matchMedia(
-    "(min-width: 70rem) and (prefers-reduced-motion: no-preference)"
-  );
+    const openingSparkle = document.querySelector(".profile-sparkle");
+    const motionAllowed = window.matchMedia(
+      "(min-width: 70rem) and (prefers-reduced-motion: no-preference)"
+    );
 
-  document.addEventListener("click", (event) => {
-    if (!sparkle || !motionAllowed.matches || event.target.closest("main")) {
-      return;
-    }
+    document.addEventListener("click", (event) => {
+      if (!openingSparkle || !motionAllowed.matches || event.detail === 0) {
+        return;
+      }
 
-    const burst = sparkle.cloneNode(false);
-    burst.style.top = `${event.clientY}px`;
-    burst.style.left = `${event.clientX}px`;
-    burst.style.right = "auto";
-    document.body.append(burst);
+      const clickedBlankSpace = event.target.matches(
+        "html, body, main, header, section, article, nav"
+      );
+      if (!clickedBlankSpace || window.getSelection()?.toString()) {
+        return;
+      }
 
-    window.setTimeout(() => burst.remove(), 2100);
-  });
-</script>
+      const burst = openingSparkle.cloneNode(false);
+      burst.classList.add("profile-sparkle-click");
+      burst.style.top = `${event.clientY - 2}px`;
+      burst.style.left = `${event.clientX - 2}px`;
+      burst.style.right = "auto";
+      document.body.append(burst);
+
+      window.setTimeout(() => burst.remove(), 2100);
+    });
+  </script>
 </body>
 </html>
