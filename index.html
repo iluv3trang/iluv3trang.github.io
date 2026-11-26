@@ -271,5 +271,25 @@ I'm Trang Nguyen, a healthcare data analyst with over five years of healthcare e
   </ul>
 </section>
   </main>
+  <script>
+  const sparkle = document.querySelector(".profile-sparkle");
+  const motionAllowed = window.matchMedia(
+    "(min-width: 70rem) and (prefers-reduced-motion: no-preference)"
+  );
+
+  document.addEventListener("click", (event) => {
+    if (!sparkle || !motionAllowed.matches || event.target.closest("main")) {
+      return;
+    }
+
+    const burst = sparkle.cloneNode(false);
+    burst.style.top = `${event.clientY}px`;
+    burst.style.left = `${event.clientX}px`;
+    burst.style.right = "auto";
+    document.body.append(burst);
+
+    window.setTimeout(() => burst.remove(), 2100);
+  });
+</script>
 </body>
 </html>
